@@ -1,4 +1,5 @@
 from typing import TypedDict, Optional
+
 import enums
 
 
@@ -7,6 +8,7 @@ class Event(TypedDict):
     type: enums.EventType
     matchId: int
     teamId: int
+    isHomeTeam: bool
     playerId: Optional[int]
     minute: int
     expandedMinute: int
