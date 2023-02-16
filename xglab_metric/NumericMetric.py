@@ -12,5 +12,5 @@ class NumericMetric:
         self.metric_id = metric_id
 
     @abstractmethod
-    def rates(self, events: List[Event]) -> List[ValuedEvent]:
+    def rate(self, events: List[Event]) -> List[ValuedEvent]:
         """ Calculate metric for event """
