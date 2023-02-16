@@ -57,7 +57,13 @@ class PassDestination(str, Enum):
 
 
 class Period(str, Enum):
-    pass
+    pre_match = 'PreMatch',
+    first_half = 'FirstHalf',
+    second_half = 'SecondHalf',
+    first_period_of_extra_time = 'FirstPeriodOfExtraTime',
+    second_period_of_extra_time = 'SecondPeriodOfExtraTime',
+    penalty_shootout = 'PenaltyShootout',
+    post_game = 'PostGame'
 
 
 class DetailedPositionName(str, Enum):
