@@ -44,7 +44,11 @@ class EventType(str, Enum):
 
 
 class PassType(str, Enum):
-    pass
+    open_play = 'OpenPlay',
+    corner = 'Corner',
+    goal_kick = 'GoalKick',
+    free_kick = 'FreeKick',
+    throw_in = 'ThrowIn'
 
 
 class PassDestination(str, Enum):
