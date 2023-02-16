@@ -1,6 +1,6 @@
 ### Installation
 
-`pip install git+https://github.com/xglab-pro/xglab_metric.git@v0.1.0`
+`pip install git+https://github.com/xglab-pro/xglab_metric.git@v0.1.2`
 
 ### Add new metric
 
