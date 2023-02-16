@@ -52,7 +52,8 @@ class PassType(str, Enum):
 
 
 class PassDestination(str, Enum):
-    pass
+    offside = 'Offside',
+    out = 'Out'
 
 
 class Period(str, Enum):
