@@ -2,113 +2,192 @@ from enum import Enum
 
 
 class EventType(str, Enum):
-    pass_ = 'Pass'
-    end = 'End'
-    start = 'Start'
-    foul = 'Foul'
-    corner_awarded =  'CornerAwarded'
-    penalty_faced = 'PenaltyFaced'
-    goal = 'Goal'
-    offside_pass = 'OffsidePass'
-    offside_provoked = 'OffsideProvoked'
-    offside_given = 'OffsideGiven'
-    keeper_pickup = 'KeeperPickup'
-    ball_recovery = 'BallRecovery'
+    Pass = 'Pass'
+    Shot = 'Shot'
     Card = 'Card'
-    claim = 'Claim'
-    keeper_sweeper = 'KeeperSweeper'
-    smother = 'Smother'
-    good_skill = 'GoodSkill'
-    blocked_pass = 'BlockedPass'
-    cross_not_claimed = 'CrossNotClaimed'
-    shield_ball_opp = 'ShieldBallOpp'
-    error = 'Error'
-    dispossessed = 'Dispossessed'
-    interception = 'Interception'
-    aerial = 'Aerial'
-    tackle = 'Tackle'
-    challenge = 'Challenge'
-    missed_shots = 'MissedShots'
-    saved_shot = 'SavedShot'
-    shot_on_post = 'ShotOnPost'
-    chance_missed = 'ChanceMissed'
-    substitution_on = 'SubstitutionOn'
-    substitution_off = 'SubstitutionOff'
-    ball_touch = 'BallTouch'
-    clearance = 'Clearance'
-    punch = 'Punch'
-    take_on = 'TakeOn'
-    save = 'Save'
-    formation_set = 'FormationSet'
-    formation_change = 'FormationChange'
+    Claim = 'Claim'
+    KeeperSweeper = 'KeeperSweeper'
+    KeeperPickup = 'KeeperPickup'
+    Smother = 'Smother'
+    GoodSkill = 'GoodSkill'
+    BlockOfPass = 'BlockOfPass'
+    OffsideProvoked = 'OffsideProvoked'
+    ShieldBall = 'ShieldBall'
+    Error = 'Error'
+    Dispossessed = 'Dispossessed'
+    Interception = 'Interception'
+    BallRecovery = 'BallRecovery'
+    Aerial = 'Aerial'
+    Tackle = 'Tackle'
+    OwnGoal = 'OwnGoal'
+    Foul = 'Foul'
+    FoulProvoked = 'FoulProvoked'
+    ChanceMissed = 'ChanceMissed'
+    End = 'End'
+    Start = 'Start'
+    KeeperThrow = 'KeeperThrow'
+    CornerProvoked = 'CornerProvoked'
+    LedToOppCorner = 'LedToOppCorner'
+    SubstitutionOn = 'SubstitutionOn'
+    SubstitutionOff = 'SubstitutionOff'
+    BallTouch = 'BallTouch'
+    Clearance = 'Clearance'
+    Punch = 'Punch'
+    TakeOn = 'TakeOn'
+    Save = 'Save'
+    FormationSet = 'FormationSet'
+    FormationChange = 'FormationChange'
+    BallCarry = 'BallCarry'
+    PenaltyFaced = 'PenaltyFaced'
 
 
 class PassType(str, Enum):
-    open_play = 'OpenPlay',
-    corner = 'Corner',
-    goal_kick = 'GoalKick',
-    free_kick = 'FreeKick',
-    throw_in = 'ThrowIn'
+    OpenPlay = 'OpenPlay',
+    Corner = 'Corner',
+    GoalKick = 'GoalKick',
+    FreeKick = 'FreeKick',
+    ThrowIn = 'ThrowIn'
 
 
 class PassDestination(str, Enum):
-    offside = 'Offside',
-    out = 'Out'
+    Offside = 'Offside',
+    Out = 'Out'
 
 
 class Period(str, Enum):
-    pre_match = 'PreMatch',
-    first_half = 'FirstHalf',
-    second_half = 'SecondHalf',
-    first_period_of_extra_time = 'FirstPeriodOfExtraTime',
-    second_period_of_extra_time = 'SecondPeriodOfExtraTime',
-    penalty_shootout = 'PenaltyShootout',
-    post_game = 'PostGame'
+    PreMatch = 'PreMatch',
+    FirstHalf = 'FirstHalf',
+    SecondHalf = 'SecondHalf',
+    FirstPeriodOfExtraTime = 'FirstPeriodOfExtraTime',
+    SecondPeriodOfExtraTime = 'SecondPeriodOfExtraTime',
+    PenaltyShootout = 'PenaltyShootout',
+    PostGame = 'PostGame'
 
 
 class DetailedPositionName(str, Enum):
-    pass
+    GK = 'GK'
+    LB = 'LB'
+    LWB = 'LWB'
+    RB = 'RB'
+    RWB = 'RWB'
+    LCB3 = 'LCB3'
+    CB3 = 'CB3'
+    RCB3 = 'RCB3'
+    LCB2 = 'LCB2'
+    RCB2 = 'RCB2'
+    CDM = 'CDM'
+    LCM2 = 'LCM2'
+    RCM2 = 'RCM2'
+    LCM3 = 'LCM3'
+    CM3 = 'CM3'
+    RCM3 = 'RCM3'
+    LCAM = 'LCAM'
+    CAM = 'CAM'
+    RCAM = 'RCAM'
+    LM = 'LM'
+    RM = 'RM'
+    LW = 'LW'
+    RW = 'RW'
+    FW1 = 'FW1'
+    LFW2 = 'LFW2'
+    RFW2 = 'RFW2'
 
 
 class GeneralPositionName(str, Enum):
-    pass
+    GK = 'GK'
+    RB = 'RB'
+    LB = 'LB'
+    CB = 'CB'
+    CM = 'CM'
+    RM = 'RM'
+    LM = 'LM'
+    CAM = 'CAM'
+    FW = 'FW'
 
 
 class BodyPart(str, Enum):
-    pass
+    LeftFoot = 'LeftFoot'
+    RightFoot = 'RightFoot'
+    Feet = 'Feet'
+    Head = 'Head'
+    Hands = 'Hands'
+    Other = 'Other'
 
 
 class SaveType(str, Enum):
-    pass
+    Diving = 'Diving'
+    Standing = 'Standing'
+    JumpRight = 'JumpRight'
+    JumpLeft = 'JumpLeft'
 
 
 class ShotResult(str, Enum):
-    pass
+    Missed = 'Missed'
+    Goal = 'Goal'
+    Saved = 'Saved'
+    OnPost = 'OnPost'
 
 
 class ErrorResult(str, Enum):
-    pass
+    Goal = 'Goal'
+    Attempt = 'Attempt'
 
 
 class CardType(str, Enum):
-    pass
+    Yellow = 'Yellow'
+    SecondYellow = 'SecondYellow'
+    Red = 'Red'
 
 
 class CardReason(str, Enum):
-    pass
+    Foul = 'Foul'
+    Other = 'Other'
 
 
 class FoulType(str, Enum):
-    pass
+    Ground = 'Ground'
+    Aerial = 'Aerial'
 
 
 class ShotType(str, Enum):
-    pass
+    RegularPlay = 'RegularPlay'
+    FromCorner = 'FromCorner'
+    SetPiece = 'SetPiece'
+    DirectFreekick = 'DirectFreekick'
+    FastBreak = 'FastBreak'
+    ThrowinSetPiece = 'ThrowinSetPiece'
+    Penalty = 'Penalty'
 
 
 class SaveResult(str, Enum):
-    pass
+    ParriedSafe = 'ParriedSafe'
+    ParriedDanger = 'ParriedDanger'
+    Collected = 'Collected'
+    OutfielderBlock = 'OutfielderBlock'
 
 
 class FormationName(str, Enum):
-    pass
+    _343 = '343'
+    _352 = '352'
+    _433 = '433'
+    _442 = '442'
+    _451 = '451'
+    _532 = '532'
+    _541 = '541'
+    _3142 = '3142'
+    _3241 = '3241'
+    _3331 = '3331'
+    _3412 = '3412'
+    _3421 = '3421'
+    _3511 = '3511'
+    _4132 = '4132'
+    _4141 = '4141'
+    _4222 = '4222'
+    _4231 = '4231'
+    _4240 = '4240'
+    _4312 = '4312'
+    _4321 = '4321'
+    _4411 = '4411'
+    _31312 = '31312'
+    _41212 = '41212'
+    _343d = '343d'
