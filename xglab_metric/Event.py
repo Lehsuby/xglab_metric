@@ -1,6 +1,6 @@
 from typing import TypedDict, Optional
 
-import enums
+import xglab_metric.enums as enums
 
 
 class Event(TypedDict):
