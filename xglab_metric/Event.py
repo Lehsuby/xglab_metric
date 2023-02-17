@@ -16,6 +16,7 @@ class Event(TypedDict):
     expandedSeconds: int
     period: enums.Period
     order: int
+    dependentChainId: int
     isTouch: bool
     successful: bool
     timeFrameUuid: Optional[str]

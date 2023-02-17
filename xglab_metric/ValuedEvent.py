@@ -8,6 +8,8 @@ class EventInfo(TypedDict):
     matchId: int
     teamId: int
     playerId: Optional[int]
+    order: int
+    dependentChainId: int
 
 
 class ValuedEvent:
