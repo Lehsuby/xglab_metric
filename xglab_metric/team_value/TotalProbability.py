@@ -1,5 +1,4 @@
 from typing import List, Dict
-from operator import itemgetter
 
 from xglab_metric.ValuedEvent import ValuedEvent
 from xglab_metric.team_value.TeamValueStrategy import TeamValueStrategy
@@ -18,7 +17,7 @@ class TotalProbability(TeamValueStrategy):
                 events_chain[ve.event_info['order'] - 1] = ve
             else:
                 events_chain.append(ve)
-                events_chain = sorted(events_chain, key=itemgetter('order'))
+                events_chain = sorted(events_chain, key=lambda k: k.event_info['order'])
             team_events_chains.update({ve.event_info['dependentChainId']: events_chain})
             events_chains_by_team.update({ve.event_info['teamId']: team_events_chains})
         for chains_by_team in events_chains_by_team.values():
