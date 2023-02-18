@@ -17,28 +17,24 @@ class ValuedEvent:
             self,
             event_info: EventInfo,
             value: float,
-            team_value: float,
-            class_name: str,
-            metric_id: int
+            class_name: str
     ):
         self.event_info = event_info
         self.value = value
-        self.team_value = team_value
         self.class_name = class_name
-        self.metric_id = metric_id
 
-    def to_row(self) -> PlayerMetricRow:
+    def to_row(self, metric_id: int, team_value: float) -> PlayerMetricRow:
         player_id = self.event_info['playerId']
         if player_id is None:
             raise Exception(f"Event {self.event_info['uuid']} should have player id")
 
         return {
-            "metricId": self.metric_id,
+            "metricId": metric_id,
             "eventUuid": self.event_info['uuid'],
             "teamId": self.event_info['teamId'],
             "matchId": self.event_info['matchId'],
             "playerId": player_id,
             "className": self.class_name,
             "value": self.value,
-            "teamValue": self.team_value
+            "teamValue": team_value
         }
