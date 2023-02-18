@@ -1,6 +1,6 @@
-import enum
+from enum import Enum
 
 
-class TeamValueStrategyType(enum):
+class TeamValueStrategyType(Enum):
     KeepValue = 'KeepValue'
     TotalProbability = 'TotalProbability'
