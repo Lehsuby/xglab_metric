@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='xglab_metric',
-      version='0.2.4',
+      version='0.2.5',
       description='Abstractions library for 3rd party metrics development at xglab.pro',
       url='https://github.com/xglab-pro/xglab_metric',
       author='Egor Gumin',
