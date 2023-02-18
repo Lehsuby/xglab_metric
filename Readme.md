@@ -10,7 +10,7 @@
 
 ### Example:
 
-`pip install git+https://github.com/xglab-pro/xglab_metric.git@v0.1.0`
+`pip install git+https://github.com/xglab-pro/xglab_metric.git@v1.0.0`
 
 The list of version you can find in tag tab
 
