@@ -16,4 +16,6 @@ The list of version you can find in tag tab
 
 # Add new metric
 
-To create a new metric, inherit from the NumericMetric class and implement the rate method
+To create a new metric, inherit from the NumericMetric class and implement the `evaluate` method.
+
+See the [example repository](https://github.com/xglab-pro/xglab_metric_example)
