@@ -1,7 +1,7 @@
 from typing import Dict, List
 
 from xglab_metric.ValuedEvent import ValuedEvent
-from xglab_metric.team_value import TeamValueStrategyType
+from xglab_metric.team_value.TeamValueStrategyType import TeamValueStrategyType
 from xglab_metric.team_value.KeepValue import KeepValue
 
 
