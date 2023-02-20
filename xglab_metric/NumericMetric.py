@@ -26,7 +26,5 @@ class NumericMetric:
     def metric_rows(self, events: List[Event]) -> List[PlayerMetricRow]:
         valued = self.evaluate(events)
         team_value_map = strategy_selector.get_team_value_map(self.team_value_strategy, valued)
-        rows: List[PlayerMetricRow] = []
-        for v in valued:
-            rows.append(v.to_row(self.metric_id, team_value_map[v.event_info['uuid']]))
+        rows: List[PlayerMetricRow] = [v.to_row(self.metric_id, team_value_map[v.event_info['uuid']]) for v in valued]
         return rows
