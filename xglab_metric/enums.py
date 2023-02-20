@@ -1,172 +1,173 @@
-from enum import Enum
+from enum import auto
+from strenum import StrEnum
 
 
-class EventType(str, Enum):
-    Pass = 'Pass'
-    Shot = 'Shot'
-    Card = 'Card'
-    Claim = 'Claim'
-    KeeperSweeper = 'KeeperSweeper'
-    KeeperPickup = 'KeeperPickup'
-    Smother = 'Smother'
-    GoodSkill = 'GoodSkill'
-    BlockOfPass = 'BlockOfPass'
-    OffsideProvoked = 'OffsideProvoked'
-    ShieldBall = 'ShieldBall'
-    Error = 'Error'
-    Dispossessed = 'Dispossessed'
-    Interception = 'Interception'
-    BallRecovery = 'BallRecovery'
-    Aerial = 'Aerial'
-    Tackle = 'Tackle'
-    OwnGoal = 'OwnGoal'
-    Foul = 'Foul'
-    FoulProvoked = 'FoulProvoked'
-    ChanceMissed = 'ChanceMissed'
-    End = 'End'
-    Start = 'Start'
-    KeeperThrow = 'KeeperThrow'
-    CornerProvoked = 'CornerProvoked'
-    LedToOppCorner = 'LedToOppCorner'
-    SubstitutionOn = 'SubstitutionOn'
-    SubstitutionOff = 'SubstitutionOff'
-    BallTouch = 'BallTouch'
-    Clearance = 'Clearance'
-    Punch = 'Punch'
-    TakeOn = 'TakeOn'
-    Save = 'Save'
-    FormationSet = 'FormationSet'
-    FormationChange = 'FormationChange'
-    BallCarry = 'BallCarry'
-    PenaltyFaced = 'PenaltyFaced'
+class EventType(StrEnum):
+    Pass = auto()
+    Shot = auto()
+    Card = auto()
+    Claim = auto()
+    KeeperSweeper = auto()
+    KeeperPickup = auto()
+    Smother = auto()
+    GoodSkill = auto()
+    BlockOfPass = auto()
+    OffsideProvoked = auto()
+    ShieldBall = auto()
+    Error = auto()
+    Dispossessed = auto()
+    Interception = auto()
+    BallRecovery = auto()
+    Aerial = auto()
+    Tackle = auto()
+    OwnGoal = auto()
+    Foul = auto()
+    FoulProvoked = auto()
+    ChanceMissed = auto()
+    End = auto()
+    Start = auto()
+    KeeperThrow = auto()
+    CornerProvoked = auto()
+    LedToOppCorner = auto()
+    SubstitutionOn = auto()
+    SubstitutionOff = auto()
+    BallTouch = auto()
+    Clearance = auto()
+    Punch = auto()
+    TakeOn = auto()
+    Save = auto()
+    FormationSet = auto()
+    FormationChange = auto()
+    BallCarry = auto()
+    PenaltyFaced = auto()
 
 
-class PassType(str, Enum):
-    OpenPlay = 'OpenPlay',
-    Corner = 'Corner',
-    GoalKick = 'GoalKick',
-    FreeKick = 'FreeKick',
-    ThrowIn = 'ThrowIn'
+class PassType(StrEnum):
+    OpenPlay = auto()
+    Corner = auto()
+    GoalKick = auto()
+    FreeKick = auto()
+    ThrowIn = auto()
 
 
-class PassDestination(str, Enum):
-    Offside = 'Offside',
-    Out = 'Out'
+class PassDestination(StrEnum):
+    Offside = auto()
+    Out = auto()
 
 
-class Period(str, Enum):
-    PreMatch = 'PreMatch',
-    FirstHalf = 'FirstHalf',
-    SecondHalf = 'SecondHalf',
-    FirstPeriodOfExtraTime = 'FirstPeriodOfExtraTime',
-    SecondPeriodOfExtraTime = 'SecondPeriodOfExtraTime',
-    PenaltyShootout = 'PenaltyShootout',
-    PostGame = 'PostGame'
+class Period(StrEnum):
+    PreMatch = auto()
+    FirstHalf = auto()
+    SecondHalf = auto()
+    FirstPeriodOfExtraTime = auto()
+    SecondPeriodOfExtraTime = auto()
+    PenaltyShootout = auto()
+    PostGame = auto()
 
 
-class DetailedPositionName(str, Enum):
-    GK = 'GK'
-    LB = 'LB'
-    LWB = 'LWB'
-    RB = 'RB'
-    RWB = 'RWB'
-    LCB3 = 'LCB3'
-    CB3 = 'CB3'
-    RCB3 = 'RCB3'
-    LCB2 = 'LCB2'
-    RCB2 = 'RCB2'
-    CDM = 'CDM'
-    LCM2 = 'LCM2'
-    RCM2 = 'RCM2'
-    LCM3 = 'LCM3'
-    CM3 = 'CM3'
-    RCM3 = 'RCM3'
-    LCAM = 'LCAM'
-    CAM = 'CAM'
-    RCAM = 'RCAM'
-    LM = 'LM'
-    RM = 'RM'
-    LW = 'LW'
-    RW = 'RW'
-    FW1 = 'FW1'
-    LFW2 = 'LFW2'
-    RFW2 = 'RFW2'
+class DetailedPositionName(StrEnum):
+    GK = auto()
+    LB = auto()
+    LWB = auto()
+    RB = auto()
+    RWB = auto()
+    LCB3 = auto()
+    CB3 = auto()
+    RCB3 = auto()
+    LCB2 = auto()
+    RCB2 = auto()
+    CDM = auto()
+    LCM2 = auto()
+    RCM2 = auto()
+    LCM3 = auto()
+    CM3 = auto()
+    RCM3 = auto()
+    LCAM = auto()
+    CAM = auto()
+    RCAM = auto()
+    LM = auto()
+    RM = auto()
+    LW = auto()
+    RW = auto()
+    FW1 = auto()
+    LFW2 = auto()
+    RFW2 = auto()
 
 
-class GeneralPositionName(str, Enum):
-    GK = 'GK'
-    RB = 'RB'
-    LB = 'LB'
-    CB = 'CB'
-    CM = 'CM'
-    RM = 'RM'
-    LM = 'LM'
-    CAM = 'CAM'
-    FW = 'FW'
+class GeneralPositionName(StrEnum):
+    GK = auto()
+    RB = auto()
+    LB = auto()
+    CB = auto()
+    CM = auto()
+    RM = auto()
+    LM = auto()
+    CAM = auto()
+    FW = auto()
 
 
-class BodyPart(str, Enum):
-    LeftFoot = 'LeftFoot'
-    RightFoot = 'RightFoot'
-    Feet = 'Feet'
-    Head = 'Head'
-    Hands = 'Hands'
-    Other = 'Other'
+class BodyPart(StrEnum):
+    LeftFoot = auto()
+    RightFoot = auto()
+    Feet = auto()
+    Head = auto()
+    Hands = auto()
+    Other = auto()
 
 
-class SaveType(str, Enum):
-    Diving = 'Diving'
-    Standing = 'Standing'
-    JumpRight = 'JumpRight'
-    JumpLeft = 'JumpLeft'
+class SaveType(StrEnum):
+    Diving = auto()
+    Standing = auto()
+    JumpRight = auto()
+    JumpLeft = auto()
 
 
-class ShotResult(str, Enum):
-    Missed = 'Missed'
-    Goal = 'Goal'
-    Saved = 'Saved'
-    OnPost = 'OnPost'
+class ShotResult(StrEnum):
+    Missed = auto()
+    Goal = auto()
+    Saved = auto()
+    OnPost = auto()
 
 
-class ErrorResult(str, Enum):
-    Goal = 'Goal'
-    Attempt = 'Attempt'
+class ErrorResult(StrEnum):
+    Goal = auto()
+    Attempt = auto()
 
 
-class CardType(str, Enum):
-    Yellow = 'Yellow'
-    SecondYellow = 'SecondYellow'
-    Red = 'Red'
+class CardType(StrEnum):
+    Yellow = auto()
+    SecondYellow = auto()
+    Red = auto()
 
 
-class CardReason(str, Enum):
-    Foul = 'Foul'
-    Other = 'Other'
+class CardReason(StrEnum):
+    Foul = auto()
+    Other = auto()
 
 
-class FoulType(str, Enum):
-    Ground = 'Ground'
-    Aerial = 'Aerial'
+class FoulType(StrEnum):
+    Ground = auto()
+    Aerial = auto()
 
 
-class ShotType(str, Enum):
-    RegularPlay = 'RegularPlay'
-    FromCorner = 'FromCorner'
-    SetPiece = 'SetPiece'
-    DirectFreekick = 'DirectFreekick'
-    FastBreak = 'FastBreak'
-    ThrowinSetPiece = 'ThrowinSetPiece'
-    Penalty = 'Penalty'
+class ShotType(StrEnum):
+    RegularPlay = auto()
+    FromCorner = auto()
+    SetPiece = auto()
+    DirectFreekick = auto()
+    FastBreak = auto()
+    ThrowinSetPiece = auto()
+    Penalty = auto()
 
 
-class SaveResult(str, Enum):
-    ParriedSafe = 'ParriedSafe'
-    ParriedDanger = 'ParriedDanger'
-    Collected = 'Collected'
-    OutfielderBlock = 'OutfielderBlock'
+class SaveResult(StrEnum):
+    ParriedSafe = auto()
+    ParriedDanger = auto()
+    Collected = auto()
+    OutfielderBlock = auto()
 
 
-class FormationName(str, Enum):
+class FormationName(StrEnum):
     _343 = '343'
     _352 = '352'
     _433 = '433'

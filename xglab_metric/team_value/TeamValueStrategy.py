@@ -9,4 +9,4 @@ class TeamValueStrategy(ABC):
     @staticmethod
     @abstractmethod
     def get_team_value_map(valued_events: List[ValuedEvent]) -> Dict[str, float]:
-        pass
+        raise NotImplementedError

@@ -1,6 +1,7 @@
-from enum import Enum
+from enum import auto
+from strenum import StrEnum
 
 
-class TeamValueStrategyType(Enum):
-    KeepValue = 'KeepValue'
-    TotalProbability = 'TotalProbability'
+class TeamValueStrategyType(StrEnum):
+    KeepValue = auto()
+    TotalProbability = auto()
