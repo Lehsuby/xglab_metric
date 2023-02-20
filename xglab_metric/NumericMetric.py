@@ -15,6 +15,7 @@ class NumericMetric:
     @abstractmethod
     def team_value_strategy(self) -> TeamValueStrategyType:
         """ Calculate metric for event """
+        raise NotImplementedError
 
     def __init__(self, metric_id: int):
         self.metric_id = metric_id
@@ -22,6 +23,7 @@ class NumericMetric:
     @abstractmethod
     def evaluate(self, events: List[Event]) -> List[ValuedEvent]:
         """ Calculate metric for event """
+        raise NotImplementedError
 
     def metric_rows(self, events: List[Event]) -> List[PlayerMetricRow]:
         valued = self.evaluate(events)
